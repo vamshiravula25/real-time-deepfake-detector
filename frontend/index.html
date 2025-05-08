@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deepfake Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Real-time Deepfake Detector</h2>
+    <h2>Upload an Image or Video</h2>
+
+    <input type="file" id="fileInput" accept="image/*,video/*">
+    <button onclick="uploadFile()">Upload</button>
+     <br>
+     <hr>
+    <div id="camera-section">
+        <video id="video" width="320" height="240" autoplay></video>
+        <button onclick="startCamera()">Start Camera</button>
+        <button onclick="stopCamera()">Stop Camera</button>
+    </div>
+
+    <p id="loading"></p>
+    <p id="result"></p>
+
+    <div id="previewContainer">
+        <img id="imagePreview" style="display: none;" />
+        <video id="videoPreview" controls style="display: none;"></video>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
